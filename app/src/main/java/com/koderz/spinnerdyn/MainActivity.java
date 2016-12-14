@@ -65,12 +65,18 @@ public class MainActivity extends AppCompatActivity {
         ll.addView(spinner);
 
 
-        spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 Log.i("TAG", "onItemClick: "+spinner.getSelectedItem().toString());
             }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
         });
+
 
     }
 }
